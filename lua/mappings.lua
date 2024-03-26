@@ -12,6 +12,8 @@ end, { desc = "File Format with conform" })
 
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 map("n", "<Leader>gg", ":LazyGit<CR>")
+map("n", "<leader>h", ":NvimTreeToggle<CR>", { desc = "Toggle NeoTree" })
+map("n", "<leader>s", ":vsplit<CR>", { desc = "Split vertically" })
 
 -- place this in one of your configuration file(s)
 local hop = require('hop')
