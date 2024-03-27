@@ -37,3 +37,10 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+vim.cmd([[
+  augroup FormatAutogroup
+    autocmd!
+    autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx :lua vim.lsp.buf.formatting_sync(nil, 1000)
+  augroup END
+]], true)
